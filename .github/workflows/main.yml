@@ -13,4 +13,4 @@ jobs :
       - run : sudo apt install tree  pandoc -y
       - run : pandoc --version
       - run : bash src/arc/main.sh
-        run : ls && tree
+      - run : ls && tree
