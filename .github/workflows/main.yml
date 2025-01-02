@@ -1,10 +1,10 @@
 name : markdown-to-html
 on :
-  push : 
-  branches: 
-    - main
-  paths : 
-    - "src/arc/**"
+  push :
+    branches:
+      - main
+    paths :
+      - "src/arc/**"
 jobs :
   convert_md :
     runs-on : ubuntu-latest
