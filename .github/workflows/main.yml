@@ -10,9 +10,6 @@ jobs :
     runs-on : ubuntu-latest
     steps :
       - uses : actions/checkout@v4
-      - run : sudo apt install pandoc git -y
+      - run : sudo apt install pandoc -y
       - run : pandoc --version
-      - run : |
-        git fetch origin "${{ github.event.before }}" --depth=1
-        TARGETS=$(git diff -z --name-only --diff-filter=ACMR "${{ github.event.before }}.." "${{ env.BASE_DIR }}" | xargs -0 -I {} echo "{}")
-        printf "TARGETS<<EOF\n%s\nEOF\n" "${TARGETS}" >> $GITHUB_ENV
+      - run : bash src/arc/main.sh
