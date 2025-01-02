@@ -11,9 +11,7 @@ jobs :
     steps :
       - uses : actions/checkout@v4
       - run : sudo apt install pandoc -y
-      - run : cd src/arc
-      - run : ls
-      - run : for file in `find . -maxdepth 1 -name '*.md'`; do echo $file; pandoc $file -s -o $(basename $file .md).html; done
+      - run : cd src/arc && for file in `find . -maxdepth 1 -name '*.md'`; do echo $file; pandoc $file -s -o $(basename $file .md).html; done
       - run : git config user.name  "roistaff"
       - run : git config user.email "roistaff1983@gmail.com"
       - run : git add .
