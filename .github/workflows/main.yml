@@ -4,4 +4,5 @@ jobs :
   convert_md :
     runs-on : ubuntu-latest
     steps :
-      - run : echo "hey hi hola"
+      - run : sudo apt install pandoc -y
+      - run : pandoc --version
