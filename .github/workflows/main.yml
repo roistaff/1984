@@ -13,4 +13,10 @@ jobs :
       - run : sudo apt install tree  pandoc -y
       - run : pandoc --version
       - run : bash src/arc/main.sh
+      - run : |
+        git config user.name  "roistaff"
+        git config user.email "roistaff1983@gmail.com"
+        git add .
+        git commit -m "generated"
+        git push
       - run : ls && tree
