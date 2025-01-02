@@ -11,4 +11,4 @@ jobs :
     steps :
       - run : sudo apt install pandoc -y
       - run : pandoc --version
-      - run : cat "src/arc/README.md"
+      - run : cat "./src/arc/README.md"
