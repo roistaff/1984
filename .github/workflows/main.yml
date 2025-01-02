@@ -10,6 +10,7 @@ jobs :
     runs-on : ubuntu-latest
     steps :
       - uses : actions/checkout@v4
-      - run : sudo apt install pandoc -y
+      - run : sudo apt install tree  pandoc -y
       - run : pandoc --version
       - run : bash src/arc/main.sh
+        run : ls && tree
