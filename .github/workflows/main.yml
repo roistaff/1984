@@ -1,0 +1,7 @@
+name : markdown-to-html
+on : [push]
+jobs : 
+convert_md :
+  runs-on : ubuntu-latest
+  steps :
+    - run : echo "hey hi hola"
