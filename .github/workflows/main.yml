@@ -1,8 +1,14 @@
 name : markdown-to-html
-on : [push]
+on :
+  push : 
+  branches: 
+    - main
+  paths : 
+    - "src/arc/**"
 jobs :
   convert_md :
     runs-on : ubuntu-latest
     steps :
       - run : sudo apt install pandoc -y
       - run : pandoc --version
+      - run : cat "src/arc/README.md"
